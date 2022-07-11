@@ -14,9 +14,9 @@ int _printf(const char *format, ...)
 	unsigned int len = 0;
 	va_list arg_list;
 	const char *ptr, *str;
-	conv_type func[] = {
+	/*	conv_type func[] = {
 		{'%': print_conv_spfr},
-	}
+	}*/
 
 	va_start(arg_list, format);
 	for (ptr = format; *ptr != '\0'; ptr++)
