@@ -1,7 +1,5 @@
 #include "main.h"
 #include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * _printf - function entry point

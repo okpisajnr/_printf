@@ -1,5 +1,4 @@
 #include "main.h"
-#include <limits.h>
 
 /**
  * int_len - returns the number digits in an int
