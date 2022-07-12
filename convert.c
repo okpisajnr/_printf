@@ -46,7 +46,6 @@ unsigned int print_int(va_list args)
 	if (num < 0)
 	{
 		_putchar('-');
-		num = -num;
 		len++;
 	}
 	print_num(num);
@@ -72,6 +71,8 @@ unsigned int print_percent(char c)
  */
 void print_num(int n)
 {
+	if (n < 0)
+		n = -n;
 	if (n / 10)
 		print_num(n / 10);
 	_putchar('0' + n % 10);
