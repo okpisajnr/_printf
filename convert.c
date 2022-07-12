@@ -39,7 +39,6 @@ unsigned int print_string(va_list args)
  */
 unsigned int print_int(va_list args)
 {
-	unsigned int len = 0;
 	int num;
 
 	num = va_arg(args, int);
