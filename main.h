@@ -23,11 +23,4 @@ typedef struct conv_sp
 	char *func;
 	int (*conv_f)(va_list args);
 } conv_type;
-
-/* converter */
-char *convert(unsigned long int num, int base, int lowercase);
-/* print_custom */
-int print_rot13(va_list l, flags_t *f);
-int print_rev(va_list l, flags_t *f);
-int print_bigS(va_list l, flags_t *f);
 #endif
