@@ -23,4 +23,6 @@ typedef struct conv_sp
 	int (*conv_f)(va_list args);
 } conv_type;
 
+/* converter */
+char *convert(unsigned long int num, int base, int lowercase);
 #endif
