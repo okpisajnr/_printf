@@ -20,9 +20,6 @@ int main(void)
 	addr = (void *)0x7ffe637541f0;
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
-	int x = _printf("Negative:[%d]\n", -762534);
-	int y = printf("Negative:[%d]\n", -762534);
-	printf("x=%i --- y=%i\n", x,y);
 	_printf("Unsigned:[%u]\n", ui);
 	printf("Unsigned:[%u]\n", ui);
 	_printf("Unsigned octal:[%o]\n", ui);
@@ -39,5 +36,19 @@ int main(void)
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
+	/*_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);*/
+	printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	_printf("%\n");
+	_printf("%!\n");
+	_printf("%K\n");
+	_printf("%d\n", INT_MIN);
+	printf("%d\n", INT_MIN);
+	_printf("%d + %d = %d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	printf("%d + %d = %d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	/*_printf("%b", 1024);
+	_printf("%S", "No special character.");
+	_printf("%S", "\n");
+	_printf("Could you print some non-prntable characters?\n%S\nThanks!\n", "Sure:\x1F\x7F\n");
+	printf("Could you print some non-prntable characters?\n%S\nThanks!\n", "Sure:\x1F\x7F\n");*/
 	return (0);
 }

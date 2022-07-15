@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (*format)
 	{
-		if (*format == '%')
+		if (*format == '%' && *(format + 1) != '%')
 		{
 			format++;
 			if (*format == 'c')
@@ -27,8 +27,14 @@ int _printf(const char *format, ...)
 				len += print_string(args);
 			else if (*format == 'i' || *format == 'd')
 				len += print_int(args);
-			else if (*format == '%')
-				len += print_percent(*format);
+			else
+				_putchar(*--format);
+				len++;
+		}
+		else if (*format == '%')
+		{
+			len += print_percent(*format);
+			format++;
 		}
 		else
 		{
