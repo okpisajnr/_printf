@@ -23,5 +23,4 @@ typedef struct conv_sp
 	char *func;
 	int (*conv_f)(va_list args);
 } conv_type;
-
 #endif
